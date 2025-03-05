@@ -8,9 +8,12 @@ LDFLAGS = -pthread -fopenmp
 # Find all source files
 VALIDATION_SRCS = $(shell find validation -name "*.cpp")
 PERF_SRCS = $(shell find performance -name "*.cpp")
+IMPL_SRCS = $(shell find implementation -name "*.cpp")
+
+# Find all source and header files for formatting
+FORMAT_SRCS = $(shell find . -name "*.cpp" -or -name "*.hpp" -or -name "*.h")
 
 # Find all implementation sources and headers
-IMPL_SRCS = $(shell find implementation -name "*.cpp")
 IMPL_HDRS = $(shell find implementation -name "*.hpp" -or -name "*.h")
 IMPL_OBJS = $(IMPL_SRCS:.cpp=.o)
 
@@ -58,6 +61,33 @@ performance: $(PERF_EXECS)
 		./$$test; \
 	done
 
+# Clang-format target
+format:
+	@if command -v clang-format >/dev/null 2>&1; then \
+		echo "Running clang-format on all source files..."; \
+		clang-format -i -style=file $(FORMAT_SRCS); \
+		echo "Formatting complete."; \
+	else \
+		echo "Error: clang-format not found. Please install clang-format."; \
+		exit 1; \
+	fi
+
+# Clang-format check target (doesn't modify files)
+format-check:
+	@if command -v clang-format >/dev/null 2>&1; then \
+		echo "Checking formatting of source files..."; \
+		clang-format -n -Werror -style=file $(FORMAT_SRCS); \
+		if [ $$? -eq 0 ]; then \
+			echo "Formatting check passed."; \
+		else \
+			echo "Formatting check failed. Run 'make format' to fix."; \
+			exit 1; \
+		fi \
+	else \
+		echo "Error: clang-format not found. Please install clang-format."; \
+		exit 1; \
+	fi
+
 # Clean up
 clean:
 	find . -name "*.o" -delete
@@ -69,8 +99,10 @@ help:
 	@echo "  all          : Build all test executables (default)"
 	@echo "  validate     : Build and run ALL validation tests"
 	@echo "  performance  : Build and run ALL performance tests"
+	@echo "  format       : Run clang-format on all source files"
+	@echo "  format-check : Check formatting without modifying files"
 	@echo "  clean        : Remove all generated files"
 	@echo "  help         : Show this help message"
 
 # Phony targets
-.PHONY: all clean validate performance help
+.PHONY: all clean validate performance format format-check help
