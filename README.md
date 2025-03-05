@@ -36,3 +36,7 @@ Where:
 Use clang-format if possible.
 
 Makefile is provided to quick run and test the code. Run `make help` for more information.
+
+## Reference
+
+Read [Reference.md](Reference.md)
