@@ -2,7 +2,7 @@
 
 # Compiler settings
 CXX = g++
-CXXFLAGS = -Wall -Wextra -std=c++17 -I. -I./implementation
+CXXFLAGS = -Wall -Wextra -std=c++17 -I. -I./implementation -pthread -fopenmp
 LDFLAGS = -pthread -fopenmp
 
 # Find all source files
