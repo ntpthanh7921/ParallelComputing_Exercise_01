@@ -76,3 +76,4 @@ dkms.conf
 build/
 
 *.pdf
+compile_flags.txt
