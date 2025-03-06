@@ -7,22 +7,24 @@ The folder structure of this project is as follows:
 ```
 .
 ├── implementation
-│   ├── barrier.c
-│   ├── barrier.h
-│   ├── counter.c
-│   ├── counter.h
-│   ├── mutex.c
-│   ├── mutex.h
-│   ├── test.cpp
-│   └── test.h
+│   ├── barrier.hpp
+│   ├── counter.hpp
+│   ├── cpu_pause.hpp
+│   ├── mutex_competitive.hpp
+│   └── mutex_mcs.hpp
 ├── performance
-│   ├── performance_hello_world_again.cpp
-│   └── performance_hello_world.cpp
+│   ├── barrier
+│   ├── counter
+│   ├── mutex
+│   └── python_data_collection
 ├── validation
-│   └── validation_hello_world.cpp
+│   ├── barrier
+│   ├── counter
+│   └── mutex
 ├── LICENSE
 ├── Makefile
-└── README
+├── README.md
+└── Reference.md
 ```
 
 Where:
