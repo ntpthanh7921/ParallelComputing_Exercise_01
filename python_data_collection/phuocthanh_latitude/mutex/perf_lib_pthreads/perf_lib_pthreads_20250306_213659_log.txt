@@ -1,0 +1,319 @@
+Performance Test Log: perf_lib_pthreads
+Date: 2025-03-06 21:36:59
+Program: ../performance/mutex/perf_lib_pthreads
+
+Test Parameters:
+  Threads: [1, 2, 4, 8, 16]
+  Iterations: [1000]
+  Total Work: 200
+  Inside Work Percentages: [10, 30, 50, 70, 90]
+  Generated Work Distributions:
+    Inside: 20, Outside: 180 (Inside percentage: 10.0%)
+    Inside: 60, Outside: 140 (Inside percentage: 30.0%)
+    Inside: 100, Outside: 100 (Inside percentage: 50.0%)
+    Inside: 140, Outside: 60 (Inside percentage: 70.0%)
+    Inside: 180, Outside: 20 (Inside percentage: 90.0%)
+  Check Target: 991
+
+Running 25 tests...
+
+Running test 1/25: threads=1, iterations=1000, inside_work=20 (10.0%), outside_work=180 (90.0%)
+  Execution time: 685 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 1
+      Iterations per thread: 1000
+      Inside work: 20
+      Outside work: 180
+      Check target: 991
+    Total execution time: 685 milliseconds
+    
+
+Running test 2/25: threads=1, iterations=1000, inside_work=60 (30.0%), outside_work=140 (70.0%)
+  Execution time: 684 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 1
+      Iterations per thread: 1000
+      Inside work: 60
+      Outside work: 140
+      Check target: 991
+    Total execution time: 684 milliseconds
+    
+
+Running test 3/25: threads=1, iterations=1000, inside_work=100 (50.0%), outside_work=100 (50.0%)
+  Execution time: 678 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 1
+      Iterations per thread: 1000
+      Inside work: 100
+      Outside work: 100
+      Check target: 991
+    Total execution time: 678 milliseconds
+    
+
+Running test 4/25: threads=1, iterations=1000, inside_work=140 (70.0%), outside_work=60 (30.0%)
+  Execution time: 678 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 1
+      Iterations per thread: 1000
+      Inside work: 140
+      Outside work: 60
+      Check target: 991
+    Total execution time: 678 milliseconds
+    
+
+Running test 5/25: threads=1, iterations=1000, inside_work=180 (90.0%), outside_work=20 (10.0%)
+  Execution time: 681 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 1
+      Iterations per thread: 1000
+      Inside work: 180
+      Outside work: 20
+      Check target: 991
+    Total execution time: 681 milliseconds
+    
+
+Running test 6/25: threads=2, iterations=1000, inside_work=20 (10.0%), outside_work=180 (90.0%)
+  Execution time: 697 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 2
+      Iterations per thread: 1000
+      Inside work: 20
+      Outside work: 180
+      Check target: 991
+    Total execution time: 697 milliseconds
+    
+
+Running test 7/25: threads=2, iterations=1000, inside_work=60 (30.0%), outside_work=140 (70.0%)
+  Execution time: 699 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 2
+      Iterations per thread: 1000
+      Inside work: 60
+      Outside work: 140
+      Check target: 991
+    Total execution time: 699 milliseconds
+    
+
+Running test 8/25: threads=2, iterations=1000, inside_work=100 (50.0%), outside_work=100 (50.0%)
+  Execution time: 738 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 2
+      Iterations per thread: 1000
+      Inside work: 100
+      Outside work: 100
+      Check target: 991
+    Total execution time: 738 milliseconds
+    
+
+Running test 9/25: threads=2, iterations=1000, inside_work=140 (70.0%), outside_work=60 (30.0%)
+  Execution time: 1133 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 2
+      Iterations per thread: 1000
+      Inside work: 140
+      Outside work: 60
+      Check target: 991
+    Total execution time: 1133 milliseconds
+    
+
+Running test 10/25: threads=2, iterations=1000, inside_work=180 (90.0%), outside_work=20 (10.0%)
+  Execution time: 1354 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 2
+      Iterations per thread: 1000
+      Inside work: 180
+      Outside work: 20
+      Check target: 991
+    Total execution time: 1354 milliseconds
+    
+
+Running test 11/25: threads=4, iterations=1000, inside_work=20 (10.0%), outside_work=180 (90.0%)
+  Execution time: 1261 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 4
+      Iterations per thread: 1000
+      Inside work: 20
+      Outside work: 180
+      Check target: 991
+    Total execution time: 1261 milliseconds
+    
+
+Running test 12/25: threads=4, iterations=1000, inside_work=60 (30.0%), outside_work=140 (70.0%)
+  Execution time: 1447 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 4
+      Iterations per thread: 1000
+      Inside work: 60
+      Outside work: 140
+      Check target: 991
+    Total execution time: 1447 milliseconds
+    
+
+Running test 13/25: threads=4, iterations=1000, inside_work=100 (50.0%), outside_work=100 (50.0%)
+  Execution time: 2054 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 4
+      Iterations per thread: 1000
+      Inside work: 100
+      Outside work: 100
+      Check target: 991
+    Total execution time: 2054 milliseconds
+    
+
+Running test 14/25: threads=4, iterations=1000, inside_work=140 (70.0%), outside_work=60 (30.0%)
+  Execution time: 2515 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 4
+      Iterations per thread: 1000
+      Inside work: 140
+      Outside work: 60
+      Check target: 991
+    Total execution time: 2515 milliseconds
+    
+
+Running test 15/25: threads=4, iterations=1000, inside_work=180 (90.0%), outside_work=20 (10.0%)
+  Execution time: 2696 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 4
+      Iterations per thread: 1000
+      Inside work: 180
+      Outside work: 20
+      Check target: 991
+    Total execution time: 2696 milliseconds
+    
+
+Running test 16/25: threads=8, iterations=1000, inside_work=20 (10.0%), outside_work=180 (90.0%)
+  Execution time: 2514 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 8
+      Iterations per thread: 1000
+      Inside work: 20
+      Outside work: 180
+      Check target: 991
+    Total execution time: 2514 milliseconds
+    
+
+Running test 17/25: threads=8, iterations=1000, inside_work=60 (30.0%), outside_work=140 (70.0%)
+  Execution time: 2896 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 8
+      Iterations per thread: 1000
+      Inside work: 60
+      Outside work: 140
+      Check target: 991
+    Total execution time: 2896 milliseconds
+    
+
+Running test 18/25: threads=8, iterations=1000, inside_work=100 (50.0%), outside_work=100 (50.0%)
+  Execution time: 3902 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 8
+      Iterations per thread: 1000
+      Inside work: 100
+      Outside work: 100
+      Check target: 991
+    Total execution time: 3902 milliseconds
+    
+
+Running test 19/25: threads=8, iterations=1000, inside_work=140 (70.0%), outside_work=60 (30.0%)
+  Execution time: 4801 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 8
+      Iterations per thread: 1000
+      Inside work: 140
+      Outside work: 60
+      Check target: 991
+    Total execution time: 4801 milliseconds
+    
+
+Running test 20/25: threads=8, iterations=1000, inside_work=180 (90.0%), outside_work=20 (10.0%)
+  Execution time: 5593 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 8
+      Iterations per thread: 1000
+      Inside work: 180
+      Outside work: 20
+      Check target: 991
+    Total execution time: 5593 milliseconds
+    
+
+Running test 21/25: threads=16, iterations=1000, inside_work=20 (10.0%), outside_work=180 (90.0%)
+  Execution time: 5056 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 16
+      Iterations per thread: 1000
+      Inside work: 20
+      Outside work: 180
+      Check target: 991
+    Total execution time: 5056 milliseconds
+    
+
+Running test 22/25: threads=16, iterations=1000, inside_work=60 (30.0%), outside_work=140 (70.0%)
+  Execution time: 6574 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 16
+      Iterations per thread: 1000
+      Inside work: 60
+      Outside work: 140
+      Check target: 991
+    Total execution time: 6574 milliseconds
+    
+
+Running test 23/25: threads=16, iterations=1000, inside_work=100 (50.0%), outside_work=100 (50.0%)
+  Execution time: 7671 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 16
+      Iterations per thread: 1000
+      Inside work: 100
+      Outside work: 100
+      Check target: 991
+    Total execution time: 7671 milliseconds
+    
+
+Running test 24/25: threads=16, iterations=1000, inside_work=140 (70.0%), outside_work=60 (30.0%)
+  Execution time: 9562 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 16
+      Iterations per thread: 1000
+      Inside work: 140
+      Outside work: 60
+      Check target: 991
+    Total execution time: 9562 milliseconds
+    
+
+Running test 25/25: threads=16, iterations=1000, inside_work=180 (90.0%), outside_work=20 (10.0%)
+  Execution time: 11211 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 16
+      Iterations per thread: 1000
+      Inside work: 180
+      Outside work: 20
+      Check target: 991
+    Total execution time: 11211 milliseconds
+    
+

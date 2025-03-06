@@ -1,0 +1,196 @@
+Performance Test Report: perf_TTAS
+=====================================================
+
+Date: 2025-03-06 22:00:57
+Program: ../performance/mutex/perf_TTAS
+
+Test Parameters:
+  Threads: [1, 2, 4, 8, 16]
+  Iterations: [1000]
+  Total Work: 200
+  Inside Work Percentages: [10, 30, 50, 70, 90]
+  Generated Work Distributions:
+    Inside: 20, Outside: 180 (Inside percentage: 10.0%)
+    Inside: 60, Outside: 140 (Inside percentage: 30.0%)
+    Inside: 100, Outside: 100 (Inside percentage: 50.0%)
+    Inside: 140, Outside: 60 (Inside percentage: 70.0%)
+    Inside: 180, Outside: 20 (Inside percentage: 90.0%)
+  Check Target: 991
+
+Total tests run: 25
+Successful tests: 25
+
+Results Summary:
+---------------
+Best performing configuration:
+  Threads: 1
+  Iterations: 1000
+  Inside Work: 100 (50.0%)
+  Outside Work: 100 (50.0%)
+  Execution Time: 545 ms
+
+Worst performing configuration:
+  Threads: 16
+  Iterations: 1000
+  Inside Work: 180 (90.0%)
+  Outside Work: 20 (10.0%)
+  Execution Time: 39648 ms
+
+Thread Scaling Analysis:
+------------------------
+
+For inside_work=20 (10.0%), outside_work=180 (90.0%):
+  Threads: 1, Time: 554 ms
+  Threads: 2, Time: 562 ms
+  Threads: 4, Time: 907 ms
+  Threads: 8, Time: 2380 ms
+  Threads: 16, Time: 6176 ms
+
+  Speedup relative to single thread:
+    Threads: 1, Speedup: 1.00x
+    Threads: 2, Speedup: 0.99x
+    Threads: 4, Speedup: 0.61x
+    Threads: 8, Speedup: 0.23x
+    Threads: 16, Speedup: 0.09x
+
+
+For inside_work=60 (30.0%), outside_work=140 (70.0%):
+  Threads: 1, Time: 549 ms
+  Threads: 2, Time: 566 ms
+  Threads: 4, Time: 1016 ms
+  Threads: 8, Time: 3852 ms
+  Threads: 16, Time: 16031 ms
+
+  Speedup relative to single thread:
+    Threads: 1, Speedup: 1.00x
+    Threads: 2, Speedup: 0.97x
+    Threads: 4, Speedup: 0.54x
+    Threads: 8, Speedup: 0.14x
+    Threads: 16, Speedup: 0.03x
+
+
+For inside_work=100 (50.0%), outside_work=100 (50.0%):
+  Threads: 1, Time: 545 ms
+  Threads: 2, Time: 567 ms
+  Threads: 4, Time: 1601 ms
+  Threads: 8, Time: 6055 ms
+  Threads: 16, Time: 25204 ms
+
+  Speedup relative to single thread:
+    Threads: 1, Speedup: 1.00x
+    Threads: 2, Speedup: 0.96x
+    Threads: 4, Speedup: 0.34x
+    Threads: 8, Speedup: 0.09x
+    Threads: 16, Speedup: 0.02x
+
+
+For inside_work=140 (70.0%), outside_work=60 (30.0%):
+  Threads: 1, Time: 545 ms
+  Threads: 2, Time: 788 ms
+  Threads: 4, Time: 2068 ms
+  Threads: 8, Time: 8388 ms
+  Threads: 16, Time: 32252 ms
+
+  Speedup relative to single thread:
+    Threads: 1, Speedup: 1.00x
+    Threads: 2, Speedup: 0.69x
+    Threads: 4, Speedup: 0.26x
+    Threads: 8, Speedup: 0.06x
+    Threads: 16, Speedup: 0.02x
+
+
+For inside_work=180 (90.0%), outside_work=20 (10.0%):
+  Threads: 1, Time: 559 ms
+  Threads: 2, Time: 1012 ms
+  Threads: 4, Time: 2543 ms
+  Threads: 8, Time: 9402 ms
+  Threads: 16, Time: 39648 ms
+
+  Speedup relative to single thread:
+    Threads: 1, Speedup: 1.00x
+    Threads: 2, Speedup: 0.55x
+    Threads: 4, Speedup: 0.22x
+    Threads: 8, Speedup: 0.06x
+    Threads: 16, Speedup: 0.01x
+
+
+Inside/Outside Work Distribution Analysis:
+----------------------------------------
+
+For threads=1, iterations=1000:
+  Inside: 20.0 (10.0%), Outside: 180.0 (90.0%), Time: 554.0 ms
+  Inside: 60.0 (30.0%), Outside: 140.0 (70.0%), Time: 549.0 ms
+  Inside: 100.0 (50.0%), Outside: 100.0 (50.0%), Time: 545.0 ms
+  Inside: 140.0 (70.0%), Outside: 60.0 (30.0%), Time: 545.0 ms
+  Inside: 180.0 (90.0%), Outside: 20.0 (10.0%), Time: 559.0 ms
+
+  Optimal work distribution: Inside: 100.0 (50.0%), Outside: 100.0 (50.0%)
+
+
+For threads=2, iterations=1000:
+  Inside: 20.0 (10.0%), Outside: 180.0 (90.0%), Time: 562.0 ms
+  Inside: 60.0 (30.0%), Outside: 140.0 (70.0%), Time: 566.0 ms
+  Inside: 100.0 (50.0%), Outside: 100.0 (50.0%), Time: 567.0 ms
+  Inside: 140.0 (70.0%), Outside: 60.0 (30.0%), Time: 788.0 ms
+  Inside: 180.0 (90.0%), Outside: 20.0 (10.0%), Time: 1012.0 ms
+
+  Optimal work distribution: Inside: 20.0 (10.0%), Outside: 180.0 (90.0%)
+
+
+For threads=4, iterations=1000:
+  Inside: 20.0 (10.0%), Outside: 180.0 (90.0%), Time: 907.0 ms
+  Inside: 60.0 (30.0%), Outside: 140.0 (70.0%), Time: 1016.0 ms
+  Inside: 100.0 (50.0%), Outside: 100.0 (50.0%), Time: 1601.0 ms
+  Inside: 140.0 (70.0%), Outside: 60.0 (30.0%), Time: 2068.0 ms
+  Inside: 180.0 (90.0%), Outside: 20.0 (10.0%), Time: 2543.0 ms
+
+  Optimal work distribution: Inside: 20.0 (10.0%), Outside: 180.0 (90.0%)
+
+
+For threads=8, iterations=1000:
+  Inside: 20.0 (10.0%), Outside: 180.0 (90.0%), Time: 2380.0 ms
+  Inside: 60.0 (30.0%), Outside: 140.0 (70.0%), Time: 3852.0 ms
+  Inside: 100.0 (50.0%), Outside: 100.0 (50.0%), Time: 6055.0 ms
+  Inside: 140.0 (70.0%), Outside: 60.0 (30.0%), Time: 8388.0 ms
+  Inside: 180.0 (90.0%), Outside: 20.0 (10.0%), Time: 9402.0 ms
+
+  Optimal work distribution: Inside: 20.0 (10.0%), Outside: 180.0 (90.0%)
+
+
+For threads=16, iterations=1000:
+  Inside: 20.0 (10.0%), Outside: 180.0 (90.0%), Time: 6176.0 ms
+  Inside: 60.0 (30.0%), Outside: 140.0 (70.0%), Time: 16031.0 ms
+  Inside: 100.0 (50.0%), Outside: 100.0 (50.0%), Time: 25204.0 ms
+  Inside: 140.0 (70.0%), Outside: 60.0 (30.0%), Time: 32252.0 ms
+  Inside: 180.0 (90.0%), Outside: 20.0 (10.0%), Time: 39648.0 ms
+
+  Optimal work distribution: Inside: 20.0 (10.0%), Outside: 180.0 (90.0%)
+
+Detailed Results:
+----------------
+ threads  iterations  inside_work  outside_work  inside_percentage  execution_time_ms
+       1        1000           20           180               10.0                554
+       1        1000           60           140               30.0                549
+       1        1000          100           100               50.0                545
+       1        1000          140            60               70.0                545
+       1        1000          180            20               90.0                559
+       2        1000           20           180               10.0                562
+       2        1000           60           140               30.0                566
+       2        1000          100           100               50.0                567
+       2        1000          140            60               70.0                788
+       2        1000          180            20               90.0               1012
+       4        1000           20           180               10.0                907
+       4        1000           60           140               30.0               1016
+       4        1000          100           100               50.0               1601
+       4        1000          140            60               70.0               2068
+       4        1000          180            20               90.0               2543
+       8        1000           20           180               10.0               2380
+       8        1000           60           140               30.0               3852
+       8        1000          100           100               50.0               6055
+       8        1000          140            60               70.0               8388
+       8        1000          180            20               90.0               9402
+      16        1000           20           180               10.0               6176
+      16        1000           60           140               30.0              16031
+      16        1000          100           100               50.0              25204
+      16        1000          140            60               70.0              32252
+      16        1000          180            20               90.0              39648
