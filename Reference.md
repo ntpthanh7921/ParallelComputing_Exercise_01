@@ -10,3 +10,8 @@ For TAS and TTAS
 For MCS implementation
 
 - [Algorithms for scalable synchronization on shared-memory multiprocessors](https://dl.acm.org/doi/pdf/10.1145/103727.103729)
+
+For sense-reversing centralized barrier
+
+- [Algorithms for scalable synchronization on shared-memory multiprocessors](https://dl.acm.org/doi/pdf/10.1145/103727.103729)
+- [Wikipedia - Barrier (computer science)](https://en.wikipedia.org/wiki/Barrier_(computer_science))
