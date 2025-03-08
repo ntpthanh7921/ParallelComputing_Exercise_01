@@ -77,7 +77,18 @@ can concentrate on the CSV file.
 
 ### Barrier
 
-(to be added)
+Similar to testing [Spinlock mutex](#spinlock-mutex)
+
+1. Make script executable: `chmod +x run_barrier_tests.sh`
+2. Run it with: `./run_barrier_tests.sh /path/to/your/executables`
+
+Replace path to your executables to the directory containing the performance
+test executables. The script will find all executable within the directory and
+run test on them.
+
+Result will be stored in new directories named after the executable. There will
+be a logfile, a detailed report file and a CSV file. For further analysis, you
+can concentrate on the CSV file.
 
 ### Counter
 
