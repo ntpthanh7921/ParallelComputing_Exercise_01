@@ -1,0 +1,56 @@
+2025-03-08 19:18:17,160 - INFO - Starting barrier performance test runner
+2025-03-08 19:18:17,160 - INFO - Test name: perf_lib_cpp
+2025-03-08 19:18:17,160 - INFO - Executable: ../performance/barrier/perf_lib_cpp
+2025-03-08 19:18:17,161 - INFO - Output directory: perf_lib_cpp
+2025-03-08 19:18:17,161 - INFO - Log file: perf_lib_cpp/perf_lib_cpp_runner.log
+2025-03-08 19:18:17,161 - INFO - CSV file: perf_lib_cpp/perf_lib_cpp_results.csv
+2025-03-08 19:18:17,161 - INFO - Thread counts: [1, 2, 4, 8, 16]
+2025-03-08 19:18:17,161 - INFO - Phase counts: [100000]
+2025-03-08 19:18:17,161 - INFO - Runs per configuration: 3
+2025-03-08 19:18:17,161 - INFO - Timeout per run: 60 seconds
+2025-03-08 19:18:17,161 - INFO - Configuration: 1 threads, 100000 phases (Run 1/3)
+2025-03-08 19:18:17,161 - INFO - Running command: ../performance/barrier/perf_lib_cpp 1 100000 (timeout: 60s)
+2025-03-08 19:18:17,184 - INFO - Results: {'num_threads': 1, 'total_phases': 100000, 'elapsed_seconds': 0.0192, 'phases_per_second': 5200770.55, 'test_name': 'perf_lib_cpp', 'status': 'success'}
+2025-03-08 19:18:17,185 - INFO - Configuration: 1 threads, 100000 phases (Run 2/3)
+2025-03-08 19:18:17,185 - INFO - Running command: ../performance/barrier/perf_lib_cpp 1 100000 (timeout: 60s)
+2025-03-08 19:18:17,207 - INFO - Results: {'num_threads': 1, 'total_phases': 100000, 'elapsed_seconds': 0.0204, 'phases_per_second': 4909288.14, 'test_name': 'perf_lib_cpp', 'status': 'success'}
+2025-03-08 19:18:17,207 - INFO - Configuration: 1 threads, 100000 phases (Run 3/3)
+2025-03-08 19:18:17,207 - INFO - Running command: ../performance/barrier/perf_lib_cpp 1 100000 (timeout: 60s)
+2025-03-08 19:18:17,229 - INFO - Results: {'num_threads': 1, 'total_phases': 100000, 'elapsed_seconds': 0.0194, 'phases_per_second': 5145986.76, 'test_name': 'perf_lib_cpp', 'status': 'success'}
+2025-03-08 19:18:17,230 - INFO - Configuration: 2 threads, 100000 phases (Run 1/3)
+2025-03-08 19:18:17,230 - INFO - Running command: ../performance/barrier/perf_lib_cpp 2 100000 (timeout: 60s)
+2025-03-08 19:18:17,389 - INFO - Results: {'num_threads': 2, 'total_phases': 100000, 'elapsed_seconds': 0.1565, 'phases_per_second': 639087.73, 'test_name': 'perf_lib_cpp', 'status': 'success'}
+2025-03-08 19:18:17,389 - INFO - Configuration: 2 threads, 100000 phases (Run 2/3)
+2025-03-08 19:18:17,389 - INFO - Running command: ../performance/barrier/perf_lib_cpp 2 100000 (timeout: 60s)
+2025-03-08 19:18:17,546 - INFO - Results: {'num_threads': 2, 'total_phases': 100000, 'elapsed_seconds': 0.1542, 'phases_per_second': 648476.84, 'test_name': 'perf_lib_cpp', 'status': 'success'}
+2025-03-08 19:18:17,546 - INFO - Configuration: 2 threads, 100000 phases (Run 3/3)
+2025-03-08 19:18:17,546 - INFO - Running command: ../performance/barrier/perf_lib_cpp 2 100000 (timeout: 60s)
+2025-03-08 19:18:17,705 - INFO - Results: {'num_threads': 2, 'total_phases': 100000, 'elapsed_seconds': 0.1567, 'phases_per_second': 638091.75, 'test_name': 'perf_lib_cpp', 'status': 'success'}
+2025-03-08 19:18:17,706 - INFO - Configuration: 4 threads, 100000 phases (Run 1/3)
+2025-03-08 19:18:17,706 - INFO - Running command: ../performance/barrier/perf_lib_cpp 4 100000 (timeout: 60s)
+2025-03-08 19:18:17,951 - INFO - Results: {'num_threads': 4, 'total_phases': 100000, 'elapsed_seconds': 0.2424, 'phases_per_second': 412468.27, 'test_name': 'perf_lib_cpp', 'status': 'success'}
+2025-03-08 19:18:17,951 - INFO - Configuration: 4 threads, 100000 phases (Run 2/3)
+2025-03-08 19:18:17,951 - INFO - Running command: ../performance/barrier/perf_lib_cpp 4 100000 (timeout: 60s)
+2025-03-08 19:18:18,207 - INFO - Results: {'num_threads': 4, 'total_phases': 100000, 'elapsed_seconds': 0.2536, 'phases_per_second': 394389.07, 'test_name': 'perf_lib_cpp', 'status': 'success'}
+2025-03-08 19:18:18,207 - INFO - Configuration: 4 threads, 100000 phases (Run 3/3)
+2025-03-08 19:18:18,207 - INFO - Running command: ../performance/barrier/perf_lib_cpp 4 100000 (timeout: 60s)
+2025-03-08 19:18:18,454 - INFO - Results: {'num_threads': 4, 'total_phases': 100000, 'elapsed_seconds': 0.2447, 'phases_per_second': 408658.48, 'test_name': 'perf_lib_cpp', 'status': 'success'}
+2025-03-08 19:18:18,454 - INFO - Configuration: 8 threads, 100000 phases (Run 1/3)
+2025-03-08 19:18:18,454 - INFO - Running command: ../performance/barrier/perf_lib_cpp 8 100000 (timeout: 60s)
+2025-03-08 19:18:19,428 - INFO - Results: {'num_threads': 8, 'total_phases': 100000, 'elapsed_seconds': 0.9712, 'phases_per_second': 102965.32, 'test_name': 'perf_lib_cpp', 'status': 'success'}
+2025-03-08 19:18:19,428 - INFO - Configuration: 8 threads, 100000 phases (Run 2/3)
+2025-03-08 19:18:19,429 - INFO - Running command: ../performance/barrier/perf_lib_cpp 8 100000 (timeout: 60s)
+2025-03-08 19:18:20,489 - INFO - Results: {'num_threads': 8, 'total_phases': 100000, 'elapsed_seconds': 1.0571, 'phases_per_second': 94596.72, 'test_name': 'perf_lib_cpp', 'status': 'success'}
+2025-03-08 19:18:20,489 - INFO - Configuration: 8 threads, 100000 phases (Run 3/3)
+2025-03-08 19:18:20,489 - INFO - Running command: ../performance/barrier/perf_lib_cpp 8 100000 (timeout: 60s)
+2025-03-08 19:18:21,534 - INFO - Results: {'num_threads': 8, 'total_phases': 100000, 'elapsed_seconds': 1.0418, 'phases_per_second': 95986.87, 'test_name': 'perf_lib_cpp', 'status': 'success'}
+2025-03-08 19:18:21,534 - INFO - Configuration: 16 threads, 100000 phases (Run 1/3)
+2025-03-08 19:18:21,534 - INFO - Running command: ../performance/barrier/perf_lib_cpp 16 100000 (timeout: 60s)
+2025-03-08 19:18:24,864 - INFO - Results: {'num_threads': 16, 'total_phases': 100000, 'elapsed_seconds': 3.3274, 'phases_per_second': 30053.31, 'test_name': 'perf_lib_cpp', 'status': 'success'}
+2025-03-08 19:18:24,864 - INFO - Configuration: 16 threads, 100000 phases (Run 2/3)
+2025-03-08 19:18:24,864 - INFO - Running command: ../performance/barrier/perf_lib_cpp 16 100000 (timeout: 60s)
+2025-03-08 19:18:27,714 - INFO - Results: {'num_threads': 16, 'total_phases': 100000, 'elapsed_seconds': 2.8467, 'phases_per_second': 35128.27, 'test_name': 'perf_lib_cpp', 'status': 'success'}
+2025-03-08 19:18:27,715 - INFO - Configuration: 16 threads, 100000 phases (Run 3/3)
+2025-03-08 19:18:27,716 - INFO - Running command: ../performance/barrier/perf_lib_cpp 16 100000 (timeout: 60s)
+2025-03-08 19:18:30,544 - INFO - Results: {'num_threads': 16, 'total_phases': 100000, 'elapsed_seconds': 2.8268, 'phases_per_second': 35375.49, 'test_name': 'perf_lib_cpp', 'status': 'success'}
+2025-03-08 19:18:30,545 - INFO - All tests completed. Results saved to perf_lib_cpp/perf_lib_cpp_results.csv

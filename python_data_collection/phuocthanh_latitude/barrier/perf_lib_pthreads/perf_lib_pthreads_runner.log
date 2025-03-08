@@ -1,0 +1,56 @@
+2025-03-08 19:11:17,830 - INFO - Starting barrier performance test runner
+2025-03-08 19:11:17,831 - INFO - Test name: perf_lib_pthreads
+2025-03-08 19:11:17,831 - INFO - Executable: ../performance/barrier/perf_lib_pthreads
+2025-03-08 19:11:17,831 - INFO - Output directory: perf_lib_pthreads
+2025-03-08 19:11:17,831 - INFO - Log file: perf_lib_pthreads/perf_lib_pthreads_runner.log
+2025-03-08 19:11:17,831 - INFO - CSV file: perf_lib_pthreads/perf_lib_pthreads_results.csv
+2025-03-08 19:11:17,831 - INFO - Thread counts: [1, 2, 4, 8, 16]
+2025-03-08 19:11:17,831 - INFO - Phase counts: [100000]
+2025-03-08 19:11:17,831 - INFO - Runs per configuration: 3
+2025-03-08 19:11:17,831 - INFO - Timeout per run: 60 seconds
+2025-03-08 19:11:17,832 - INFO - Configuration: 1 threads, 100000 phases (Run 1/3)
+2025-03-08 19:11:17,832 - INFO - Running command: ../performance/barrier/perf_lib_pthreads 1 100000 (timeout: 60s)
+2025-03-08 19:11:17,943 - INFO - Results: {'num_threads': 1, 'total_phases': 100000, 'elapsed_seconds': 0.1078, 'phases_per_second': 927455.0, 'test_name': 'perf_lib_pthreads', 'status': 'success'}
+2025-03-08 19:11:17,943 - INFO - Configuration: 1 threads, 100000 phases (Run 2/3)
+2025-03-08 19:11:17,944 - INFO - Running command: ../performance/barrier/perf_lib_pthreads 1 100000 (timeout: 60s)
+2025-03-08 19:11:18,053 - INFO - Results: {'num_threads': 1, 'total_phases': 100000, 'elapsed_seconds': 0.1073, 'phases_per_second': 932042.7, 'test_name': 'perf_lib_pthreads', 'status': 'success'}
+2025-03-08 19:11:18,053 - INFO - Configuration: 1 threads, 100000 phases (Run 3/3)
+2025-03-08 19:11:18,054 - INFO - Running command: ../performance/barrier/perf_lib_pthreads 1 100000 (timeout: 60s)
+2025-03-08 19:11:18,164 - INFO - Results: {'num_threads': 1, 'total_phases': 100000, 'elapsed_seconds': 0.1082, 'phases_per_second': 924367.79, 'test_name': 'perf_lib_pthreads', 'status': 'success'}
+2025-03-08 19:11:18,165 - INFO - Configuration: 2 threads, 100000 phases (Run 1/3)
+2025-03-08 19:11:18,165 - INFO - Running command: ../performance/barrier/perf_lib_pthreads 2 100000 (timeout: 60s)
+2025-03-08 19:11:18,605 - INFO - Results: {'num_threads': 2, 'total_phases': 100000, 'elapsed_seconds': 0.4389, 'phases_per_second': 227865.95, 'test_name': 'perf_lib_pthreads', 'status': 'success'}
+2025-03-08 19:11:18,606 - INFO - Configuration: 2 threads, 100000 phases (Run 2/3)
+2025-03-08 19:11:18,606 - INFO - Running command: ../performance/barrier/perf_lib_pthreads 2 100000 (timeout: 60s)
+2025-03-08 19:11:19,042 - INFO - Results: {'num_threads': 2, 'total_phases': 100000, 'elapsed_seconds': 0.4332, 'phases_per_second': 230841.69, 'test_name': 'perf_lib_pthreads', 'status': 'success'}
+2025-03-08 19:11:19,042 - INFO - Configuration: 2 threads, 100000 phases (Run 3/3)
+2025-03-08 19:11:19,042 - INFO - Running command: ../performance/barrier/perf_lib_pthreads 2 100000 (timeout: 60s)
+2025-03-08 19:11:19,475 - INFO - Results: {'num_threads': 2, 'total_phases': 100000, 'elapsed_seconds': 0.431, 'phases_per_second': 232043.16, 'test_name': 'perf_lib_pthreads', 'status': 'success'}
+2025-03-08 19:11:19,476 - INFO - Configuration: 4 threads, 100000 phases (Run 1/3)
+2025-03-08 19:11:19,476 - INFO - Running command: ../performance/barrier/perf_lib_pthreads 4 100000 (timeout: 60s)
+2025-03-08 19:11:20,152 - INFO - Results: {'num_threads': 4, 'total_phases': 100000, 'elapsed_seconds': 0.6737, 'phases_per_second': 148432.28, 'test_name': 'perf_lib_pthreads', 'status': 'success'}
+2025-03-08 19:11:20,152 - INFO - Configuration: 4 threads, 100000 phases (Run 2/3)
+2025-03-08 19:11:20,152 - INFO - Running command: ../performance/barrier/perf_lib_pthreads 4 100000 (timeout: 60s)
+2025-03-08 19:11:20,830 - INFO - Results: {'num_threads': 4, 'total_phases': 100000, 'elapsed_seconds': 0.6758, 'phases_per_second': 147969.02, 'test_name': 'perf_lib_pthreads', 'status': 'success'}
+2025-03-08 19:11:20,830 - INFO - Configuration: 4 threads, 100000 phases (Run 3/3)
+2025-03-08 19:11:20,830 - INFO - Running command: ../performance/barrier/perf_lib_pthreads 4 100000 (timeout: 60s)
+2025-03-08 19:11:21,510 - INFO - Results: {'num_threads': 4, 'total_phases': 100000, 'elapsed_seconds': 0.6778, 'phases_per_second': 147545.77, 'test_name': 'perf_lib_pthreads', 'status': 'success'}
+2025-03-08 19:11:21,511 - INFO - Configuration: 8 threads, 100000 phases (Run 1/3)
+2025-03-08 19:11:21,511 - INFO - Running command: ../performance/barrier/perf_lib_pthreads 8 100000 (timeout: 60s)
+2025-03-08 19:11:23,387 - INFO - Results: {'num_threads': 8, 'total_phases': 100000, 'elapsed_seconds': 1.874, 'phases_per_second': 53360.46, 'test_name': 'perf_lib_pthreads', 'status': 'success'}
+2025-03-08 19:11:23,387 - INFO - Configuration: 8 threads, 100000 phases (Run 2/3)
+2025-03-08 19:11:23,387 - INFO - Running command: ../performance/barrier/perf_lib_pthreads 8 100000 (timeout: 60s)
+2025-03-08 19:11:25,337 - INFO - Results: {'num_threads': 8, 'total_phases': 100000, 'elapsed_seconds': 1.9476, 'phases_per_second': 51345.98, 'test_name': 'perf_lib_pthreads', 'status': 'success'}
+2025-03-08 19:11:25,337 - INFO - Configuration: 8 threads, 100000 phases (Run 3/3)
+2025-03-08 19:11:25,337 - INFO - Running command: ../performance/barrier/perf_lib_pthreads 8 100000 (timeout: 60s)
+2025-03-08 19:11:27,236 - INFO - Results: {'num_threads': 8, 'total_phases': 100000, 'elapsed_seconds': 1.8969, 'phases_per_second': 52718.26, 'test_name': 'perf_lib_pthreads', 'status': 'success'}
+2025-03-08 19:11:27,237 - INFO - Configuration: 16 threads, 100000 phases (Run 1/3)
+2025-03-08 19:11:27,237 - INFO - Running command: ../performance/barrier/perf_lib_pthreads 16 100000 (timeout: 60s)
+2025-03-08 19:11:31,598 - INFO - Results: {'num_threads': 16, 'total_phases': 100000, 'elapsed_seconds': 4.3589, 'phases_per_second': 22941.76, 'test_name': 'perf_lib_pthreads', 'status': 'success'}
+2025-03-08 19:11:31,598 - INFO - Configuration: 16 threads, 100000 phases (Run 2/3)
+2025-03-08 19:11:31,598 - INFO - Running command: ../performance/barrier/perf_lib_pthreads 16 100000 (timeout: 60s)
+2025-03-08 19:11:35,881 - INFO - Results: {'num_threads': 16, 'total_phases': 100000, 'elapsed_seconds': 4.281, 'phases_per_second': 23359.29, 'test_name': 'perf_lib_pthreads', 'status': 'success'}
+2025-03-08 19:11:35,881 - INFO - Configuration: 16 threads, 100000 phases (Run 3/3)
+2025-03-08 19:11:35,881 - INFO - Running command: ../performance/barrier/perf_lib_pthreads 16 100000 (timeout: 60s)
+2025-03-08 19:11:40,209 - INFO - Results: {'num_threads': 16, 'total_phases': 100000, 'elapsed_seconds': 4.3243, 'phases_per_second': 23125.08, 'test_name': 'perf_lib_pthreads', 'status': 'success'}
+2025-03-08 19:11:40,209 - INFO - All tests completed. Results saved to perf_lib_pthreads/perf_lib_pthreads_results.csv
