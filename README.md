@@ -47,9 +47,9 @@ various combination of parameters. Also stores test results on various platform
 
 1. Run `make all`
 
-2. Validate sync primitives by running `make validate`
+2. Validate sync primitives by running `make run-validation`
 
-3. Performance test sync primitives by running `make performance`. This will
+3. Performance test sync primitives by running `make run-performance`. This will
    only run each test once with default parameter values.
 
 4. To running performance test with parameter tuning (basically means trying
