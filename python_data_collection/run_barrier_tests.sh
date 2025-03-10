@@ -19,7 +19,7 @@ find "$DIRECTORY" -type f -executable | while read -r executable; do
   output_dir="${base_name}"
   mkdir -p "$output_dir"
 
-  echo "Running mutex test on: $base_name"
+  echo "Running barrier test on: $base_name"
   echo "Output directory: $output_dir"
 
   # Run the mutex test with appropriate parameters
