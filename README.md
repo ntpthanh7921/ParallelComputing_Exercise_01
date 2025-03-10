@@ -110,9 +110,6 @@ definition is `.clang-format` file (not shown on directory structure).
 - running simple simple performance test with default parameter values
 - check formatting of code using `clang-format`
 
-The Makefile is have some weird dependencies such that it recompile more than
-needed. But for the purpose of this project, this behavior does not matter.
-
 Run `make help` for more information.
 
 ### `python`
