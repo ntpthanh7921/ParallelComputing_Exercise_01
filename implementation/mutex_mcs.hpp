@@ -17,8 +17,8 @@ class Spinlock_Mutex_MCS
 public:
     struct QueueNode
     {
-        QueueNode *next = nullptr;
-        bool is_locked = true;
+        std::atomic<QueueNode *> next = nullptr;
+        std::atomic<bool> is_locked = true;
     };
 
 private:
@@ -31,13 +31,13 @@ public:
     {
         std::chrono::microseconds curr_delay = STARTING_DELAY;
 
-        pending->next = nullptr;
-        QueueNode *predecessor = tail.exchange(pending, std::memory_order_acquire);
+        pending->next.store(nullptr, std::memory_order_release);
+        QueueNode *predecessor = tail.exchange(pending, std::memory_order_acq_rel);
         if (predecessor != nullptr)
         {
-            pending->is_locked = true;
-            predecessor->next = pending;
-            while (pending->is_locked)
+            pending->is_locked.store(true, std::memory_order_release);
+            predecessor->next.store(pending, std::memory_order_release);
+            while (pending->is_locked.load(std::memory_order_acquire))
             {
                 // Spinning, so use cpu_pause()
                 cpu_pause();
@@ -53,12 +53,12 @@ public:
         std::chrono::microseconds curr_delay = STARTING_DELAY;
         auto temp = pending;  // use in cas to prevent pending being changed
 
-        if (pending->next == nullptr)
+        if (pending->next.load(std::memory_order_acquire) == nullptr)
         {
-            if (tail.compare_exchange_strong(temp, nullptr, std::memory_order_release,
+            if (tail.compare_exchange_strong(temp, nullptr, std::memory_order_acq_rel,
                                              std::memory_order_relaxed))
                 return;
-            while (pending->next == nullptr)
+            while (pending->next.load(std::memory_order_acquire) == nullptr)
             {
                 // Spinning, so use cpu_pause()
                 cpu_pause();
@@ -67,7 +67,8 @@ public:
                 //     curr_delay *= 2;
             }
         }
-        pending->next->is_locked = false;
+        pending->next.load(std::memory_order_acquire)
+            ->is_locked.store(false, std::memory_order_release);
     }
 
     // To use the lock, use will have to allocate a QueueNode

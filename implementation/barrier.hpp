@@ -37,7 +37,7 @@ public:
         // Local sense variable, each thread have their own version of this
         bool local_sense = !sense;
 
-        if (count.fetch_sub(1, std::memory_order_release) == 1)
+        if (count.fetch_sub(1, std::memory_order_acq_rel) == 1)
         {
             count.store(limit, std::memory_order_release);
             sense = local_sense;
@@ -74,7 +74,7 @@ public:
         // Local sense variable, each thread have their own version of this
         bool local_sense = !sense;
 
-        if (count.fetch_sub(1, std::memory_order_release) == 1)
+        if (count.fetch_sub(1, std::memory_order_acq_rel) == 1)
         {
             count.store(limit, std::memory_order_release);
             sense = local_sense;
