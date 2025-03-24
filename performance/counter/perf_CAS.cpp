@@ -9,24 +9,23 @@ using namespace std::chrono;
 
 Counter_CAS counter_cas = 0;
 
-void thread_entry(int num_iters, int check_target)
-{
-    for (auto i = 0; i < num_iters; i++) {
-        counter_cas.set_value(0);
-        for (auto j = 0; j < check_target; j++)
-            counter_cas.increment();
-    }
+void thread_entry(int check_target) {
+    for (auto j = 0; j < check_target; j++) 
+        counter_cas.increment();
 }
 
 void run_test(int num_threads, int num_iters, int check_target) {
-    std::vector<std::thread> threads;
+    for (auto i = 0; i < num_iters; i++) {
+        std::vector<std::thread> threads;
 
-    for (int i = 0; i < num_threads; ++i) {
-        threads.emplace_back(thread_entry, num_iters, check_target);
-    }
+        counter_cas.set_value(0);
+        for (int i = 0; i < num_threads; ++i) {
+            threads.emplace_back(thread_entry, check_target);
+        }
 
-    for (auto &thread : threads) {
-        thread.join();
+        for (auto &thread : threads) {
+            thread.join();
+        }
     }
 }
 
