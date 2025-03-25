@@ -10,14 +10,14 @@ import numpy as np
 
 
 def run_test(
-    program_path, threads, iterations, inside_work, outside_work, check_target=991
+    program_path, threads, iterations, counter_targets
 ):
     """Run the C++ program with specified parameters and parse the output."""
     cmd = [
         program_path,
         str(threads),
         str(iterations),
-        str(check_target),
+        str(int(counter_targets / threads)),
     ]
 
     try:
@@ -31,7 +31,7 @@ def run_test(
             return {
                 "threads": threads,
                 "iterations": iterations,
-                "check_target": check_target,
+                "counter_targets": counter_targets,
                 "execution_time_ms": execution_time,
                 "output": output,
                 "success": True,
@@ -40,7 +40,7 @@ def run_test(
             return {
                 "threads": threads,
                 "iterations": iterations,
-                "check_target": check_target,
+                "counter_targets": counter_targets,
                 "execution_time_ms": -1,
                 "output": output,
                 "success": False,
@@ -51,40 +51,12 @@ def run_test(
         return {
             "threads": threads,
             "iterations": iterations,
-            "check_target": check_target,
+            "counter_targets": counter_targets,
             "execution_time_ms": -1,
             "output": e.stdout,
             "error": e.stderr,
             "success": False,
         }
-
-
-def generate_work_distributions(total_work, inside_work_percentages):
-    """
-    Generate inside_work and outside_work values based on total_work and percentages.
-
-    Args:
-        total_work: The sum of inside_work and outside_work
-        inside_work_percentages: List of percentages for inside_work
-
-    Returns:
-        List of tuples (inside_work, outside_work)
-    """
-    distributions = []
-
-    for percentage in inside_work_percentages:
-        inside_work = int(round(total_work * percentage / 100))
-        outside_work = total_work - inside_work
-        # Ensure we don't have zero values
-        inside_work = max(1, inside_work)
-        outside_work = max(1, outside_work)
-        # Adjust to match total_work exactly
-        if inside_work + outside_work != total_work:
-            outside_work = total_work - inside_work
-        distributions.append((inside_work, outside_work))
-
-    return distributions
-
 
 def main():
     parser = argparse.ArgumentParser(
@@ -106,20 +78,11 @@ def main():
         help="List of iteration counts to test",
     )
     parser.add_argument(
-        "--total-work",
-        type=int,
-        default=200,
-        help="Total work (sum of inside_work and outside_work)",
-    )
-    parser.add_argument(
-        "--inside-work-percentages",
+        "--counter-targets",
         type=int,
         nargs="+",
-        default=[10, 30, 50, 70, 90],
-        help="Percentages of inside_work relative to total work",
-    )
-    parser.add_argument(
-        "--check-target", type=int, default=991, help="Check target value"
+        default=[32000, 64000, 96000, 128000, 160000],
+        help="List of counter target value",
     )
     parser.add_argument(
         "--test-name",
@@ -149,25 +112,16 @@ def main():
     report_filename = os.path.join(args.output_dir, f"{base_filename}_report.txt")
     log_filename = os.path.join(args.output_dir, f"{base_filename}_log.txt")
 
-    # Generate work distributions
-    work_distributions = generate_work_distributions(
-        args.total_work, args.inside_work_percentages
-    )
-
     # Generate all combinations of test parameters
     test_configs = []
     for threads in args.threads:
         for iterations in args.iterations:
-            for inside_work, outside_work in work_distributions:
-                test_configs.append((threads, iterations, inside_work, outside_work))
+            for counter_targets in args.counter_targets:
+                test_configs.append((threads, iterations, counter_targets))
 
     total_tests = len(test_configs)
-    print(
-        f"Starting performance testing with {total_tests} different parameter combinations..."
-    )
+    print(f"Starting performance testing with {total_tests} different parameter combinations...")
     print(f"Test name: {args.test_name if args.test_name else 'Not specified'}")
-    print(f"Total work: {args.total_work}")
-    print(f"Inside work percentages: {args.inside_work_percentages}")
 
     # Open log file
     with open(log_filename, "w") as log_file:
@@ -176,30 +130,18 @@ def main():
         )
         log_file.write(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
         log_file.write(f"Program: {args.program_path}\n\n")
-        log_file.write("Test Parameters:\n")
+        log_file.write(f"Test Parameters:\n")
         log_file.write(f"  Threads: {args.threads}\n")
         log_file.write(f"  Iterations: {args.iterations}\n")
-        log_file.write(f"  Total Work: {args.total_work}\n")
-        log_file.write(f"  Inside Work Percentages: {args.inside_work_percentages}\n")
-        log_file.write("  Generated Work Distributions:\n")
-        for inside_work, outside_work in work_distributions:
-            actual_percentage = (inside_work / (inside_work + outside_work)) * 100
-            log_file.write(
-                f"    Inside: {inside_work}, Outside: {outside_work} "
-                f"(Inside percentage: {actual_percentage:.1f}%)\n"
-            )
-        log_file.write(f"  Check Target: {args.check_target}\n\n")
+        log_file.write(f"  Counter Target: {args.counter_targets}\n\n")
         log_file.write(f"Running {total_tests} tests...\n\n")
 
         results = []
-        for i, (threads, iterations, inside_work, outside_work) in enumerate(
+        for i, (threads, iterations, counter_targets) in enumerate(
             test_configs, 1
         ):
-            inside_percentage = (inside_work / (inside_work + outside_work)) * 100
             test_info = (
-                f"Running test {i}/{total_tests}: threads={threads}, iterations={iterations}, "
-                f"inside_work={inside_work} ({inside_percentage:.1f}%), "
-                f"outside_work={outside_work} ({100 - inside_percentage:.1f}%)"
+                f"Running test {i}/{total_tests}: threads={threads}, iterations={iterations}, counter target={counter_targets}"
             )
             print(test_info)
             log_file.write(f"{test_info}\n")
@@ -208,9 +150,7 @@ def main():
                 args.program_path,
                 threads,
                 iterations,
-                inside_work,
-                outside_work,
-                args.check_target,
+                counter_targets,
             )
 
             results.append(result)
@@ -234,21 +174,14 @@ def main():
     # Convert results to DataFrame and save to CSV
     df = pd.DataFrame(results)
 
-    # Basic analysis
+    # # Basic analysis
     successful_results = df[df["success"] == True].copy()
     if not successful_results.empty:
-        # Calculate inside work percentage for each configuration
-        successful_results["inside_percentage"] = (
-            successful_results["inside_work"]
-            / (successful_results["inside_work"] + successful_results["outside_work"])
-            * 100
-        )
-
         # Save to CSV
         cols_to_save = [
             "threads",
             "iterations",
-            "check_target",
+            "counter_targets",
             "execution_time_ms",
             "success",
         ]
@@ -262,16 +195,14 @@ def main():
         # Thread scaling analysis
         if len(args.threads) > 1:
             print("\nThread Scaling Analysis:")
-            for inside, outside in work_distributions:
+            for counter_targets in args.counter_targets:
                 subset = successful_results[
-                    (successful_results["inside_work"] == inside)
-                    & (successful_results["outside_work"] == outside)
-                    & (successful_results["iterations"] == args.iterations[0])
+                    (successful_results["counter_targets"] == counter_targets)
+                  & (successful_results["iterations"] == args.iterations[0])
                 ]
                 if not subset.empty:
-                    inside_pct = (inside / (inside + outside)) * 100
                     print(
-                        f"\nFor inside_work={inside} ({inside_pct:.1f}%), outside_work={outside} ({100 - inside_pct:.1f}%):"
+                        f"\nFor counter target={counter_targets}:\n"
                     )
                     thread_perf = subset[["threads", "execution_time_ms"]].sort_values(
                         "threads"
@@ -289,27 +220,6 @@ def main():
                         print("\nSpeedup relative to single thread:")
                         print(thread_perf[["threads", "speedup"]])
 
-        # Inside/outside work distribution analysis
-        if len(args.inside_work_percentages) > 1:
-            print("\nInside/Outside Work Distribution Analysis:")
-            for thread in args.threads:
-                for iter_count in args.iterations:
-                    subset = successful_results[
-                        (successful_results["threads"] == thread)
-                        & (successful_results["iterations"] == iter_count)
-                    ]
-                    if not subset.empty:
-                        print(f"\nFor threads={thread}, iterations={iter_count}:")
-                        work_perf = subset[
-                            [
-                                "inside_work",
-                                "outside_work",
-                                "inside_percentage",
-                                "execution_time_ms",
-                            ]
-                        ].sort_values("inside_percentage")
-                        print(work_perf)
-
         # Generate a detailed report
         with open(report_filename, "w") as f:
             f.write(
@@ -322,16 +232,7 @@ def main():
             f.write("Test Parameters:\n")
             f.write(f"  Threads: {args.threads}\n")
             f.write(f"  Iterations: {args.iterations}\n")
-            f.write(f"  Total Work: {args.total_work}\n")
-            f.write(f"  Inside Work Percentages: {args.inside_work_percentages}\n")
-            f.write("  Generated Work Distributions:\n")
-            for inside_work, outside_work in work_distributions:
-                actual_percentage = (inside_work / (inside_work + outside_work)) * 100
-                f.write(
-                    f"    Inside: {inside_work}, Outside: {outside_work} "
-                    f"(Inside percentage: {actual_percentage:.1f}%)\n"
-                )
-            f.write(f"  Check Target: {args.check_target}\n\n")
+            f.write(f"  Check Target: {args.counter_targets}\n\n")
 
             f.write(f"Total tests run: {len(results)}\n")
             f.write(f"Successful tests: {len(successful_results)}\n\n")
@@ -344,12 +245,6 @@ def main():
             ]
             f.write(f"  Threads: {best['threads']}\n")
             f.write(f"  Iterations: {best['iterations']}\n")
-            f.write(
-                f"  Inside Work: {best['inside_work']} ({best['inside_percentage']:.1f}%)\n"
-            )
-            f.write(
-                f"  Outside Work: {best['outside_work']} ({100 - best['inside_percentage']:.1f}%)\n"
-            )
             f.write(f"  Execution Time: {best['execution_time_ms']} ms\n\n")
 
             f.write("Worst performing configuration:\n")
@@ -358,28 +253,20 @@ def main():
             ]
             f.write(f"  Threads: {worst['threads']}\n")
             f.write(f"  Iterations: {worst['iterations']}\n")
-            f.write(
-                f"  Inside Work: {worst['inside_work']} ({worst['inside_percentage']:.1f}%)\n"
-            )
-            f.write(
-                f"  Outside Work: {worst['outside_work']} ({100 - worst['inside_percentage']:.1f}%)\n"
-            )
             f.write(f"  Execution Time: {worst['execution_time_ms']} ms\n\n")
 
             # Thread scaling analysis
             if len(args.threads) > 1:
                 f.write("Thread Scaling Analysis:\n")
                 f.write("------------------------\n")
-                for inside, outside in work_distributions:
+                for counter_targets in args.counter_targets:
                     subset = successful_results[
-                        (successful_results["inside_work"] == inside)
-                        & (successful_results["outside_work"] == outside)
-                        & (successful_results["iterations"] == args.iterations[0])
-                    ]
+                    (successful_results["counter_targets"] == counter_targets)
+                  & (successful_results["iterations"] == args.iterations[0])
+                ]
                     if not subset.empty:
-                        inside_pct = (inside / (inside + outside)) * 100
                         f.write(
-                            f"\nFor inside_work={inside} ({inside_pct:.1f}%), outside_work={outside} ({100 - inside_pct:.1f}%):\n"
+                            f"\nFor counter target={counter_targets}:\n"
                         )
                         thread_perf = subset[
                             ["threads", "execution_time_ms"]
@@ -402,45 +289,6 @@ def main():
                                 )
                         f.write("\n")
 
-            # Inside/outside work distribution analysis
-            if len(args.inside_work_percentages) > 1:
-                f.write("\nInside/Outside Work Distribution Analysis:\n")
-                f.write("----------------------------------------\n")
-                for thread in args.threads:
-                    for iter_count in args.iterations:
-                        subset = successful_results[
-                            (successful_results["threads"] == thread)
-                            & (successful_results["iterations"] == iter_count)
-                        ]
-                        if not subset.empty:
-                            f.write(
-                                f"\nFor threads={thread}, iterations={iter_count}:\n"
-                            )
-                            work_perf = subset[
-                                [
-                                    "inside_work",
-                                    "outside_work",
-                                    "inside_percentage",
-                                    "execution_time_ms",
-                                ]
-                            ].sort_values("inside_percentage")
-                            for _, row in work_perf.iterrows():
-                                f.write(
-                                    f"  Inside: {row['inside_work']} ({row['inside_percentage']:.1f}%), "
-                                    f"Outside: {row['outside_work']} ({100 - row['inside_percentage']:.1f}%), "
-                                    f"Time: {row['execution_time_ms']} ms\n"
-                                )
-
-                            # Find optimal work distribution
-                            best_dist = work_perf.loc[
-                                work_perf["execution_time_ms"].idxmin()
-                            ]
-                            f.write(
-                                f"\n  Optimal work distribution: "
-                                f"Inside: {best_dist['inside_work']} ({best_dist['inside_percentage']:.1f}%), "
-                                f"Outside: {best_dist['outside_work']} ({100 - best_dist['inside_percentage']:.1f}%)\n\n"
-                            )
-
             # Add detailed tables
             f.write("Detailed Results:\n")
             f.write("----------------\n")
@@ -448,9 +296,7 @@ def main():
                 [
                     "threads",
                     "iterations",
-                    "inside_work",
-                    "outside_work",
-                    "inside_percentage",
+                    "counter_targets",
                     "execution_time_ms",
                 ]
             ]

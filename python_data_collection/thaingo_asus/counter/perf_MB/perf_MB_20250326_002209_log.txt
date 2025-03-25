@@ -1,0 +1,261 @@
+Performance Test Log: perf_MB
+Date: 2025-03-26 00:22:09
+Program: ../../../build/performance/counter/perf_MB
+
+Test Parameters:
+  Threads: [1, 2, 4, 8, 16]
+  Iterations: [1000]
+  Counter Target: [32000, 64000, 96000, 128000, 160000]
+
+Running 25 tests...
+
+Running test 1/25: threads=1, iterations=1000, counter target=32000
+  Execution time: 1269 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 1
+      Iterations per thread: 1000
+      Counter target per thread: 32000
+    Total execution time: 1269 milliseconds
+    
+
+Running test 2/25: threads=1, iterations=1000, counter target=64000
+  Execution time: 2184 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 1
+      Iterations per thread: 1000
+      Counter target per thread: 64000
+    Total execution time: 2184 milliseconds
+    
+
+Running test 3/25: threads=1, iterations=1000, counter target=96000
+  Execution time: 3360 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 1
+      Iterations per thread: 1000
+      Counter target per thread: 96000
+    Total execution time: 3360 milliseconds
+    
+
+Running test 4/25: threads=1, iterations=1000, counter target=128000
+  Execution time: 4547 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 1
+      Iterations per thread: 1000
+      Counter target per thread: 128000
+    Total execution time: 4547 milliseconds
+    
+
+Running test 5/25: threads=1, iterations=1000, counter target=160000
+  Execution time: 5623 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 1
+      Iterations per thread: 1000
+      Counter target per thread: 160000
+    Total execution time: 5623 milliseconds
+    
+
+Running test 6/25: threads=2, iterations=1000, counter target=32000
+  Execution time: 3558 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 2
+      Iterations per thread: 1000
+      Counter target per thread: 16000
+    Total execution time: 3558 milliseconds
+    
+
+Running test 7/25: threads=2, iterations=1000, counter target=64000
+  Execution time: 6705 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 2
+      Iterations per thread: 1000
+      Counter target per thread: 32000
+    Total execution time: 6705 milliseconds
+    
+
+Running test 8/25: threads=2, iterations=1000, counter target=96000
+  Execution time: 9604 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 2
+      Iterations per thread: 1000
+      Counter target per thread: 48000
+    Total execution time: 9604 milliseconds
+    
+
+Running test 9/25: threads=2, iterations=1000, counter target=128000
+  Execution time: 14590 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 2
+      Iterations per thread: 1000
+      Counter target per thread: 64000
+    Total execution time: 14590 milliseconds
+    
+
+Running test 10/25: threads=2, iterations=1000, counter target=160000
+  Execution time: 16914 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 2
+      Iterations per thread: 1000
+      Counter target per thread: 80000
+    Total execution time: 16914 milliseconds
+    
+
+Running test 11/25: threads=4, iterations=1000, counter target=32000
+  Execution time: 7447 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 4
+      Iterations per thread: 1000
+      Counter target per thread: 8000
+    Total execution time: 7447 milliseconds
+    
+
+Running test 12/25: threads=4, iterations=1000, counter target=64000
+  Execution time: 13814 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 4
+      Iterations per thread: 1000
+      Counter target per thread: 16000
+    Total execution time: 13814 milliseconds
+    
+
+Running test 13/25: threads=4, iterations=1000, counter target=96000
+  Execution time: 19984 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 4
+      Iterations per thread: 1000
+      Counter target per thread: 24000
+    Total execution time: 19984 milliseconds
+    
+
+Running test 14/25: threads=4, iterations=1000, counter target=128000
+  Execution time: 29861 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 4
+      Iterations per thread: 1000
+      Counter target per thread: 32000
+    Total execution time: 29861 milliseconds
+    
+
+Running test 15/25: threads=4, iterations=1000, counter target=160000
+  Execution time: 36707 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 4
+      Iterations per thread: 1000
+      Counter target per thread: 40000
+    Total execution time: 36707 milliseconds
+    
+
+Running test 16/25: threads=8, iterations=1000, counter target=32000
+  Execution time: 7498 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 8
+      Iterations per thread: 1000
+      Counter target per thread: 4000
+    Total execution time: 7498 milliseconds
+    
+
+Running test 17/25: threads=8, iterations=1000, counter target=64000
+  Execution time: 14598 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 8
+      Iterations per thread: 1000
+      Counter target per thread: 8000
+    Total execution time: 14598 milliseconds
+    
+
+Running test 18/25: threads=8, iterations=1000, counter target=96000
+  Execution time: 22723 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 8
+      Iterations per thread: 1000
+      Counter target per thread: 12000
+    Total execution time: 22723 milliseconds
+    
+
+Running test 19/25: threads=8, iterations=1000, counter target=128000
+  Execution time: 29753 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 8
+      Iterations per thread: 1000
+      Counter target per thread: 16000
+    Total execution time: 29753 milliseconds
+    
+
+Running test 20/25: threads=8, iterations=1000, counter target=160000
+  Execution time: 37869 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 8
+      Iterations per thread: 1000
+      Counter target per thread: 20000
+    Total execution time: 37869 milliseconds
+    
+
+Running test 21/25: threads=16, iterations=1000, counter target=32000
+  Execution time: 7481 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 16
+      Iterations per thread: 1000
+      Counter target per thread: 2000
+    Total execution time: 7481 milliseconds
+    
+
+Running test 22/25: threads=16, iterations=1000, counter target=64000
+  Execution time: 15066 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 16
+      Iterations per thread: 1000
+      Counter target per thread: 4000
+    Total execution time: 15066 milliseconds
+    
+
+Running test 23/25: threads=16, iterations=1000, counter target=96000
+  Execution time: 23247 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 16
+      Iterations per thread: 1000
+      Counter target per thread: 6000
+    Total execution time: 23247 milliseconds
+    
+
+Running test 24/25: threads=16, iterations=1000, counter target=128000
+  Execution time: 30796 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 16
+      Iterations per thread: 1000
+      Counter target per thread: 8000
+    Total execution time: 30796 milliseconds
+    
+
+Running test 25/25: threads=16, iterations=1000, counter target=160000
+  Execution time: 38376 ms
+  Program output:
+    Running test with parameters:
+      Number of threads: 16
+      Iterations per thread: 1000
+      Counter target per thread: 10000
+    Total execution time: 38376 milliseconds
+    
+
