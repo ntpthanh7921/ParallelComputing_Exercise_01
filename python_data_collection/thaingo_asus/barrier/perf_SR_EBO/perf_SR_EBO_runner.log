@@ -1,0 +1,56 @@
+2025-03-25 19:06:58,699 - INFO - Starting barrier performance test runner
+2025-03-25 19:06:58,699 - INFO - Test name: perf_SR_EBO
+2025-03-25 19:06:58,699 - INFO - Executable: ../../../build/performance/barrier/perf_SR_EBO
+2025-03-25 19:06:58,699 - INFO - Output directory: perf_SR_EBO
+2025-03-25 19:06:58,699 - INFO - Log file: perf_SR_EBO/perf_SR_EBO_runner.log
+2025-03-25 19:06:58,699 - INFO - CSV file: perf_SR_EBO/perf_SR_EBO_results.csv
+2025-03-25 19:06:58,699 - INFO - Thread counts: [1, 2, 4, 8, 16]
+2025-03-25 19:06:58,699 - INFO - Phase counts: [100000]
+2025-03-25 19:06:58,699 - INFO - Runs per configuration: 3
+2025-03-25 19:06:58,699 - INFO - Timeout per run: 60 seconds
+2025-03-25 19:06:58,699 - INFO - Configuration: 1 threads, 100000 phases (Run 1/3)
+2025-03-25 19:06:58,699 - INFO - Running command: ../../../build/performance/barrier/perf_SR_EBO 1 100000 (timeout: 60s)
+2025-03-25 19:06:58,703 - INFO - Results: {'num_threads': 1, 'total_phases': 100000, 'elapsed_seconds': 0.0018, 'phases_per_second': 54679498.85, 'test_name': 'perf_SR_EBO', 'status': 'success'}
+2025-03-25 19:06:58,708 - INFO - Configuration: 1 threads, 100000 phases (Run 2/3)
+2025-03-25 19:06:58,709 - INFO - Running command: ../../../build/performance/barrier/perf_SR_EBO 1 100000 (timeout: 60s)
+2025-03-25 19:06:58,712 - INFO - Results: {'num_threads': 1, 'total_phases': 100000, 'elapsed_seconds': 0.0019, 'phases_per_second': 51639262.57, 'test_name': 'perf_SR_EBO', 'status': 'success'}
+2025-03-25 19:06:58,713 - INFO - Configuration: 1 threads, 100000 phases (Run 3/3)
+2025-03-25 19:06:58,713 - INFO - Running command: ../../../build/performance/barrier/perf_SR_EBO 1 100000 (timeout: 60s)
+2025-03-25 19:06:58,717 - INFO - Results: {'num_threads': 1, 'total_phases': 100000, 'elapsed_seconds': 0.002, 'phases_per_second': 49632249.84, 'test_name': 'perf_SR_EBO', 'status': 'success'}
+2025-03-25 19:06:58,717 - INFO - Configuration: 2 threads, 100000 phases (Run 1/3)
+2025-03-25 19:06:58,717 - INFO - Running command: ../../../build/performance/barrier/perf_SR_EBO 2 100000 (timeout: 60s)
+2025-03-25 19:07:01,494 - INFO - Results: {'num_threads': 2, 'total_phases': 100000, 'elapsed_seconds': 2.7756, 'phases_per_second': 36028.89, 'test_name': 'perf_SR_EBO', 'status': 'success'}
+2025-03-25 19:07:01,495 - INFO - Configuration: 2 threads, 100000 phases (Run 2/3)
+2025-03-25 19:07:01,495 - INFO - Running command: ../../../build/performance/barrier/perf_SR_EBO 2 100000 (timeout: 60s)
+2025-03-25 19:07:04,316 - INFO - Results: {'num_threads': 2, 'total_phases': 100000, 'elapsed_seconds': 2.8196, 'phases_per_second': 35465.82, 'test_name': 'perf_SR_EBO', 'status': 'success'}
+2025-03-25 19:07:04,317 - INFO - Configuration: 2 threads, 100000 phases (Run 3/3)
+2025-03-25 19:07:04,317 - INFO - Running command: ../../../build/performance/barrier/perf_SR_EBO 2 100000 (timeout: 60s)
+2025-03-25 19:07:07,084 - INFO - Results: {'num_threads': 2, 'total_phases': 100000, 'elapsed_seconds': 2.7651, 'phases_per_second': 36164.62, 'test_name': 'perf_SR_EBO', 'status': 'success'}
+2025-03-25 19:07:07,084 - INFO - Configuration: 4 threads, 100000 phases (Run 1/3)
+2025-03-25 19:07:07,084 - INFO - Running command: ../../../build/performance/barrier/perf_SR_EBO 4 100000 (timeout: 60s)
+2025-03-25 19:07:11,337 - INFO - Results: {'num_threads': 4, 'total_phases': 100000, 'elapsed_seconds': 4.251, 'phases_per_second': 23523.99, 'test_name': 'perf_SR_EBO', 'status': 'success'}
+2025-03-25 19:07:11,337 - INFO - Configuration: 4 threads, 100000 phases (Run 2/3)
+2025-03-25 19:07:11,337 - INFO - Running command: ../../../build/performance/barrier/perf_SR_EBO 4 100000 (timeout: 60s)
+2025-03-25 19:07:15,550 - INFO - Results: {'num_threads': 4, 'total_phases': 100000, 'elapsed_seconds': 4.2101, 'phases_per_second': 23752.47, 'test_name': 'perf_SR_EBO', 'status': 'success'}
+2025-03-25 19:07:15,550 - INFO - Configuration: 4 threads, 100000 phases (Run 3/3)
+2025-03-25 19:07:15,550 - INFO - Running command: ../../../build/performance/barrier/perf_SR_EBO 4 100000 (timeout: 60s)
+2025-03-25 19:07:19,882 - INFO - Results: {'num_threads': 4, 'total_phases': 100000, 'elapsed_seconds': 4.3297, 'phases_per_second': 23096.53, 'test_name': 'perf_SR_EBO', 'status': 'success'}
+2025-03-25 19:07:19,882 - INFO - Configuration: 8 threads, 100000 phases (Run 1/3)
+2025-03-25 19:07:19,882 - INFO - Running command: ../../../build/performance/barrier/perf_SR_EBO 8 100000 (timeout: 60s)
+2025-03-25 19:07:24,764 - INFO - Results: {'num_threads': 8, 'total_phases': 100000, 'elapsed_seconds': 4.8804, 'phases_per_second': 20490.28, 'test_name': 'perf_SR_EBO', 'status': 'success'}
+2025-03-25 19:07:24,765 - INFO - Configuration: 8 threads, 100000 phases (Run 2/3)
+2025-03-25 19:07:24,765 - INFO - Running command: ../../../build/performance/barrier/perf_SR_EBO 8 100000 (timeout: 60s)
+2025-03-25 19:07:29,896 - INFO - Results: {'num_threads': 8, 'total_phases': 100000, 'elapsed_seconds': 5.1296, 'phases_per_second': 19494.82, 'test_name': 'perf_SR_EBO', 'status': 'success'}
+2025-03-25 19:07:29,897 - INFO - Configuration: 8 threads, 100000 phases (Run 3/3)
+2025-03-25 19:07:29,897 - INFO - Running command: ../../../build/performance/barrier/perf_SR_EBO 8 100000 (timeout: 60s)
+2025-03-25 19:07:34,798 - INFO - Results: {'num_threads': 8, 'total_phases': 100000, 'elapsed_seconds': 4.8993, 'phases_per_second': 20411.12, 'test_name': 'perf_SR_EBO', 'status': 'success'}
+2025-03-25 19:07:34,798 - INFO - Configuration: 16 threads, 100000 phases (Run 1/3)
+2025-03-25 19:07:34,798 - INFO - Running command: ../../../build/performance/barrier/perf_SR_EBO 16 100000 (timeout: 60s)
+2025-03-25 19:07:40,733 - INFO - Results: {'num_threads': 16, 'total_phases': 100000, 'elapsed_seconds': 5.9322, 'phases_per_second': 16857.25, 'test_name': 'perf_SR_EBO', 'status': 'success'}
+2025-03-25 19:07:40,733 - INFO - Configuration: 16 threads, 100000 phases (Run 2/3)
+2025-03-25 19:07:40,733 - INFO - Running command: ../../../build/performance/barrier/perf_SR_EBO 16 100000 (timeout: 60s)
+2025-03-25 19:07:46,868 - INFO - Results: {'num_threads': 16, 'total_phases': 100000, 'elapsed_seconds': 6.1333, 'phases_per_second': 16304.45, 'test_name': 'perf_SR_EBO', 'status': 'success'}
+2025-03-25 19:07:46,869 - INFO - Configuration: 16 threads, 100000 phases (Run 3/3)
+2025-03-25 19:07:46,869 - INFO - Running command: ../../../build/performance/barrier/perf_SR_EBO 16 100000 (timeout: 60s)
+2025-03-25 19:07:52,821 - INFO - Results: {'num_threads': 16, 'total_phases': 100000, 'elapsed_seconds': 5.9501, 'phases_per_second': 16806.51, 'test_name': 'perf_SR_EBO', 'status': 'success'}
+2025-03-25 19:07:52,821 - INFO - All tests completed. Results saved to perf_SR_EBO/perf_SR_EBO_results.csv

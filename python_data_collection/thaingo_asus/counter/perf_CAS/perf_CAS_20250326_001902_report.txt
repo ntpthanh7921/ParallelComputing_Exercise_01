@@ -1,0 +1,131 @@
+Performance Test Report: perf_CAS
+=====================================================
+
+Date: 2025-03-26 00:21:34
+Program: ../../../build/performance/counter/perf_CAS
+
+Test Parameters:
+  Threads: [1, 2, 4, 8, 16]
+  Iterations: [1000]
+  Check Target: [32000, 64000, 96000, 128000, 160000]
+
+Total tests run: 25
+Successful tests: 25
+
+Results Summary:
+---------------
+Best performing configuration:
+  Threads: 1
+  Iterations: 1000
+  Execution Time: 661 ms
+
+Worst performing configuration:
+  Threads: 16
+  Iterations: 1000
+  Execution Time: 14585 ms
+
+Thread Scaling Analysis:
+------------------------
+
+For counter target=32000:
+  Threads: 1, Time: 661 ms
+  Threads: 2, Time: 1288 ms
+  Threads: 4, Time: 2777 ms
+  Threads: 8, Time: 2754 ms
+  Threads: 16, Time: 2686 ms
+
+  Speedup relative to single thread:
+    Threads: 1, Speedup: 1.00x
+    Threads: 2, Speedup: 0.51x
+    Threads: 4, Speedup: 0.24x
+    Threads: 8, Speedup: 0.24x
+    Threads: 16, Speedup: 0.25x
+
+
+For counter target=64000:
+  Threads: 1, Time: 1266 ms
+  Threads: 2, Time: 2518 ms
+  Threads: 4, Time: 4917 ms
+  Threads: 8, Time: 5074 ms
+  Threads: 16, Time: 5669 ms
+
+  Speedup relative to single thread:
+    Threads: 1, Speedup: 1.00x
+    Threads: 2, Speedup: 0.50x
+    Threads: 4, Speedup: 0.26x
+    Threads: 8, Speedup: 0.25x
+    Threads: 16, Speedup: 0.22x
+
+
+For counter target=96000:
+  Threads: 1, Time: 1875 ms
+  Threads: 2, Time: 5191 ms
+  Threads: 4, Time: 6582 ms
+  Threads: 8, Time: 7960 ms
+  Threads: 16, Time: 8586 ms
+
+  Speedup relative to single thread:
+    Threads: 1, Speedup: 1.00x
+    Threads: 2, Speedup: 0.36x
+    Threads: 4, Speedup: 0.28x
+    Threads: 8, Speedup: 0.24x
+    Threads: 16, Speedup: 0.22x
+
+
+For counter target=128000:
+  Threads: 1, Time: 2436 ms
+  Threads: 2, Time: 7537 ms
+  Threads: 4, Time: 9889 ms
+  Threads: 8, Time: 10492 ms
+  Threads: 16, Time: 11549 ms
+
+  Speedup relative to single thread:
+    Threads: 1, Speedup: 1.00x
+    Threads: 2, Speedup: 0.32x
+    Threads: 4, Speedup: 0.25x
+    Threads: 8, Speedup: 0.23x
+    Threads: 16, Speedup: 0.21x
+
+
+For counter target=160000:
+  Threads: 1, Time: 3123 ms
+  Threads: 2, Time: 6204 ms
+  Threads: 4, Time: 12347 ms
+  Threads: 8, Time: 14197 ms
+  Threads: 16, Time: 14585 ms
+
+  Speedup relative to single thread:
+    Threads: 1, Speedup: 1.00x
+    Threads: 2, Speedup: 0.50x
+    Threads: 4, Speedup: 0.25x
+    Threads: 8, Speedup: 0.22x
+    Threads: 16, Speedup: 0.21x
+
+Detailed Results:
+----------------
+ threads  iterations  counter_targets  execution_time_ms
+       1        1000            32000                661
+       1        1000            64000               1266
+       1        1000            96000               1875
+       1        1000           128000               2436
+       1        1000           160000               3123
+       2        1000            32000               1288
+       2        1000            64000               2518
+       2        1000            96000               5191
+       2        1000           128000               7537
+       2        1000           160000               6204
+       4        1000            32000               2777
+       4        1000            64000               4917
+       4        1000            96000               6582
+       4        1000           128000               9889
+       4        1000           160000              12347
+       8        1000            32000               2754
+       8        1000            64000               5074
+       8        1000            96000               7960
+       8        1000           128000              10492
+       8        1000           160000              14197
+      16        1000            32000               2686
+      16        1000            64000               5669
+      16        1000            96000               8586
+      16        1000           128000              11549
+      16        1000           160000              14585

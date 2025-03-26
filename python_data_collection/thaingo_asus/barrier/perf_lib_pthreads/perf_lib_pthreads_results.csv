@@ -1,0 +1,16 @@
+timestamp,test_name,num_threads,total_phases,elapsed_seconds,phases_per_second,status
+2025-03-25 19:00:38,perf_lib_pthreads,1,100000,0.0497,2011501.77,success
+2025-03-25 19:00:38,perf_lib_pthreads,1,100000,0.0592,1688576.08,success
+2025-03-25 19:00:38,perf_lib_pthreads,1,100000,0.0519,1927419.03,success
+2025-03-25 19:00:38,perf_lib_pthreads,2,100000,0.3206,311919.44,success
+2025-03-25 19:00:39,perf_lib_pthreads,2,100000,0.3641,274673.91,success
+2025-03-25 19:00:39,perf_lib_pthreads,2,100000,0.3238,308827.85,success
+2025-03-25 19:00:39,perf_lib_pthreads,4,100000,0.5819,171861.21,success
+2025-03-25 19:00:40,perf_lib_pthreads,4,100000,1.0482,95398.34,success
+2025-03-25 19:00:41,perf_lib_pthreads,4,100000,0.7359,135880.29,success
+2025-03-25 19:00:43,perf_lib_pthreads,8,100000,1.6818,59461.75,success
+2025-03-25 19:00:45,perf_lib_pthreads,8,100000,1.6171,61840.88,success
+2025-03-25 19:00:46,perf_lib_pthreads,8,100000,1.7901,55864.01,success
+2025-03-25 19:00:50,perf_lib_pthreads,16,100000,3.702,27012.36,success
+2025-03-25 19:00:54,perf_lib_pthreads,16,100000,3.8441,26013.73,success
+2025-03-25 19:00:58,perf_lib_pthreads,16,100000,3.6404,27469.61,success
