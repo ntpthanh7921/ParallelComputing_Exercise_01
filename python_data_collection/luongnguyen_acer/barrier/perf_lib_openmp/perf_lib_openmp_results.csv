@@ -1,0 +1,16 @@
+timestamp,test_name,num_threads,total_phases,elapsed_seconds,phases_per_second,status
+2025-03-29 13:50:24,perf_lib_openmp,1,100000,0.0182,5493941.91,success
+2025-03-29 13:50:24,perf_lib_openmp,1,100000,0.0188,5325294.84,success
+2025-03-29 13:50:24,perf_lib_openmp,1,100000,0.0175,5716073.05,success
+2025-03-29 13:50:25,perf_lib_openmp,2,100000,0.0197,5073616.91,success
+2025-03-29 13:50:25,perf_lib_openmp,2,100000,0.0218,4579273.94,success
+2025-03-29 13:50:25,perf_lib_openmp,2,100000,0.0199,5028069.45,success
+2025-03-29 13:50:25,perf_lib_openmp,4,100000,0.0265,3779535.32,success
+2025-03-29 13:50:25,perf_lib_openmp,4,100000,0.0279,3579428.59,success
+2025-03-29 13:50:25,perf_lib_openmp,4,100000,0.0241,4153215.96,success
+2025-03-29 13:50:25,perf_lib_openmp,8,100000,0.042,2383410.24,success
+2025-03-29 13:50:25,perf_lib_openmp,8,100000,0.0762,1313059.26,success
+2025-03-29 13:50:25,perf_lib_openmp,8,100000,0.0436,2295221.86,success
+2025-03-29 13:50:29,perf_lib_openmp,16,100000,4.6419,21542.82,success
+2025-03-29 13:50:33,perf_lib_openmp,16,100000,3.7923,26369.32,success
+2025-03-29 13:50:37,perf_lib_openmp,16,100000,3.3888,29508.63,success

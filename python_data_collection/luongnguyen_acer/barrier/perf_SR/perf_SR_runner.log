@@ -1,0 +1,59 @@
+2025-03-29 13:50:50,057 - INFO - Starting barrier performance test runner
+2025-03-29 13:50:50,057 - INFO - Test name: perf_SR
+2025-03-29 13:50:50,057 - INFO - Executable: ../build/performance/barrier/perf_SR
+2025-03-29 13:50:50,057 - INFO - Output directory: perf_SR
+2025-03-29 13:50:50,057 - INFO - Log file: perf_SR/perf_SR_runner.log
+2025-03-29 13:50:50,057 - INFO - CSV file: perf_SR/perf_SR_results.csv
+2025-03-29 13:50:50,057 - INFO - Thread counts: [1, 2, 4, 8, 16]
+2025-03-29 13:50:50,057 - INFO - Phase counts: [100000]
+2025-03-29 13:50:50,057 - INFO - Runs per configuration: 3
+2025-03-29 13:50:50,057 - INFO - Timeout per run: 60 seconds
+2025-03-29 13:50:50,057 - INFO - Configuration: 1 threads, 100000 phases (Run 1/3)
+2025-03-29 13:50:50,057 - INFO - Running command: ../build/performance/barrier/perf_SR 1 100000 (timeout: 60s)
+2025-03-29 13:50:50,061 - INFO - Results: {'num_threads': 1, 'total_phases': 100000, 'elapsed_seconds': 0.0022, 'phases_per_second': 46315036.73, 'test_name': 'perf_SR', 'status': 'success'}
+2025-03-29 13:50:50,061 - INFO - Configuration: 1 threads, 100000 phases (Run 2/3)
+2025-03-29 13:50:50,061 - INFO - Running command: ../build/performance/barrier/perf_SR 1 100000 (timeout: 60s)
+2025-03-29 13:50:50,065 - INFO - Results: {'num_threads': 1, 'total_phases': 100000, 'elapsed_seconds': 0.0022, 'phases_per_second': 45954615.22, 'test_name': 'perf_SR', 'status': 'success'}
+2025-03-29 13:50:50,065 - INFO - Configuration: 1 threads, 100000 phases (Run 3/3)
+2025-03-29 13:50:50,065 - INFO - Running command: ../build/performance/barrier/perf_SR 1 100000 (timeout: 60s)
+2025-03-29 13:50:50,070 - INFO - Results: {'num_threads': 1, 'total_phases': 100000, 'elapsed_seconds': 0.0024, 'phases_per_second': 41951904.66, 'test_name': 'perf_SR', 'status': 'success'}
+2025-03-29 13:50:50,071 - INFO - Configuration: 2 threads, 100000 phases (Run 1/3)
+2025-03-29 13:50:50,071 - INFO - Running command: ../build/performance/barrier/perf_SR 2 100000 (timeout: 60s)
+2025-03-29 13:50:50,087 - INFO - Results: {'num_threads': 2, 'total_phases': 100000, 'elapsed_seconds': 0.0129, 'phases_per_second': 7759507.41, 'test_name': 'perf_SR', 'status': 'success'}
+2025-03-29 13:50:50,087 - INFO - Configuration: 2 threads, 100000 phases (Run 2/3)
+2025-03-29 13:50:50,087 - INFO - Running command: ../build/performance/barrier/perf_SR 2 100000 (timeout: 60s)
+2025-03-29 13:50:50,104 - INFO - Results: {'num_threads': 2, 'total_phases': 100000, 'elapsed_seconds': 0.0139, 'phases_per_second': 7214850.01, 'test_name': 'perf_SR', 'status': 'success'}
+2025-03-29 13:50:50,104 - INFO - Configuration: 2 threads, 100000 phases (Run 3/3)
+2025-03-29 13:50:50,104 - INFO - Running command: ../build/performance/barrier/perf_SR 2 100000 (timeout: 60s)
+2025-03-29 13:50:50,123 - INFO - Results: {'num_threads': 2, 'total_phases': 100000, 'elapsed_seconds': 0.0138, 'phases_per_second': 7240191.69, 'test_name': 'perf_SR', 'status': 'success'}
+2025-03-29 13:50:50,124 - INFO - Configuration: 4 threads, 100000 phases (Run 1/3)
+2025-03-29 13:50:50,124 - INFO - Running command: ../build/performance/barrier/perf_SR 4 100000 (timeout: 60s)
+2025-03-29 13:50:50,153 - INFO - Results: {'num_threads': 4, 'total_phases': 100000, 'elapsed_seconds': 0.0254, 'phases_per_second': 3935029.82, 'test_name': 'perf_SR', 'status': 'success'}
+2025-03-29 13:50:50,154 - INFO - Configuration: 4 threads, 100000 phases (Run 2/3)
+2025-03-29 13:50:50,154 - INFO - Running command: ../build/performance/barrier/perf_SR 4 100000 (timeout: 60s)
+2025-03-29 13:50:50,181 - INFO - Results: {'num_threads': 4, 'total_phases': 100000, 'elapsed_seconds': 0.026, 'phases_per_second': 3844059.28, 'test_name': 'perf_SR', 'status': 'success'}
+2025-03-29 13:50:50,181 - INFO - Configuration: 4 threads, 100000 phases (Run 3/3)
+2025-03-29 13:50:50,182 - INFO - Running command: ../build/performance/barrier/perf_SR 4 100000 (timeout: 60s)
+2025-03-29 13:50:50,206 - INFO - Results: {'num_threads': 4, 'total_phases': 100000, 'elapsed_seconds': 0.0234, 'phases_per_second': 4266572.73, 'test_name': 'perf_SR', 'status': 'success'}
+2025-03-29 13:50:50,207 - INFO - Configuration: 8 threads, 100000 phases (Run 1/3)
+2025-03-29 13:50:50,207 - INFO - Running command: ../build/performance/barrier/perf_SR 8 100000 (timeout: 60s)
+2025-03-29 13:50:50,254 - INFO - Results: {'num_threads': 8, 'total_phases': 100000, 'elapsed_seconds': 0.0462, 'phases_per_second': 2166306.25, 'test_name': 'perf_SR', 'status': 'success'}
+2025-03-29 13:50:50,255 - INFO - Configuration: 8 threads, 100000 phases (Run 2/3)
+2025-03-29 13:50:50,255 - INFO - Running command: ../build/performance/barrier/perf_SR 8 100000 (timeout: 60s)
+2025-03-29 13:50:50,306 - INFO - Results: {'num_threads': 8, 'total_phases': 100000, 'elapsed_seconds': 0.0501, 'phases_per_second': 1997579.33, 'test_name': 'perf_SR', 'status': 'success'}
+2025-03-29 13:50:50,307 - INFO - Configuration: 8 threads, 100000 phases (Run 3/3)
+2025-03-29 13:50:50,307 - INFO - Running command: ../build/performance/barrier/perf_SR 8 100000 (timeout: 60s)
+2025-03-29 13:50:50,395 - INFO - Results: {'num_threads': 8, 'total_phases': 100000, 'elapsed_seconds': 0.0874, 'phases_per_second': 1144487.36, 'test_name': 'perf_SR', 'status': 'success'}
+2025-03-29 13:50:50,395 - INFO - Configuration: 16 threads, 100000 phases (Run 1/3)
+2025-03-29 13:50:50,396 - INFO - Running command: ../build/performance/barrier/perf_SR 16 100000 (timeout: 60s)
+2025-03-29 13:51:50,461 - ERROR - Test timed out after 60 seconds
+2025-03-29 13:51:50,461 - ERROR - Test execution failed with status: timeout
+2025-03-29 13:51:50,461 - INFO - Configuration: 16 threads, 100000 phases (Run 2/3)
+2025-03-29 13:51:50,461 - INFO - Running command: ../build/performance/barrier/perf_SR 16 100000 (timeout: 60s)
+2025-03-29 13:52:50,526 - ERROR - Test timed out after 60 seconds
+2025-03-29 13:52:50,526 - ERROR - Test execution failed with status: timeout
+2025-03-29 13:52:50,526 - INFO - Configuration: 16 threads, 100000 phases (Run 3/3)
+2025-03-29 13:52:50,526 - INFO - Running command: ../build/performance/barrier/perf_SR 16 100000 (timeout: 60s)
+2025-03-29 13:53:50,589 - ERROR - Test timed out after 60 seconds
+2025-03-29 13:53:50,589 - ERROR - Test execution failed with status: timeout
+2025-03-29 13:53:50,589 - INFO - All tests completed. Results saved to perf_SR/perf_SR_results.csv
