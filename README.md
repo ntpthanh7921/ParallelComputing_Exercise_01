@@ -18,6 +18,8 @@ The folder structure of this project is as follows:
 │   └── mutex
 ├── python_data_collection
 │   ├── phuocthanh_latitude
+│   ├── thaingo_asus
+│   ├── luongnguyen_acer
 │   ├── mutex_test_many_params_with_log.py
 │   └── run_mutex_tests.sh
 ├── validation
