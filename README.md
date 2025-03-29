@@ -118,6 +118,8 @@ Python is used for conveniently running performance test with many combinations
 of parameter and logging the result. The needed package listing are:
 
 - `pandas`
+- `matplotlib`
+- `seaborn`
 
 ### `bash`
 
