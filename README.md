@@ -4,7 +4,7 @@
 
 The folder structure of this project is as follows:
 
-```
+```{.tree-output}
 .
 ├── implementation
 │   ├── barrier.hpp
@@ -17,8 +17,20 @@ The folder structure of this project is as follows:
 │   ├── counter
 │   └── mutex
 ├── python_data_collection
+│   ├── luongnguyen_acer
 │   ├── phuocthanh_latitude
+│   ├── thaingo_asus
+│   ├── barrier_test_many_params_with_log.py
+│   ├── counter_test_many_params_with_log.py
 │   ├── mutex_test_many_params_with_log.py
+│   ├── perf_barrier_visualization.ipynb
+│   ├── perf_counter_visualization.ipynb
+│   ├── perf_mutex_visualization.ipynb
+│   ├── run_barrier_tests.linux.sh
+│   ├── run_barrier_tests.sh
+│   ├── run_counter_tests.linux.sh
+│   ├── run_counter_tests.sh
+│   ├── run_mutex_tests.linux.sh
 │   └── run_mutex_tests.sh
 ├── validation
 │   ├── barrier
@@ -92,7 +104,18 @@ can concentrate on the CSV file.
 
 ### Counter
 
-(to be added)
+Similar to testing [Spinlock mutex](#spinlock-mutex)
+
+1. Make script executable: `chmod +x run_barrier_tests.sh`
+2. Run it with: `./run_barrier_tests.sh /path/to/your/executables`
+
+Replace path to your executables to the directory containing the performance
+test executables. The script will find all executable within the directory and
+run test on them.
+
+Result will be stored in new directories named after the executable. There will
+be a logfile and a CSV file. For further analysis, you can concentrate on the
+CSV file.
 
 ## Tool
 
